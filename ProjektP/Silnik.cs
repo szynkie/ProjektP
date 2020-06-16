@@ -6,10 +6,11 @@ namespace ProjektP
 {
     public class Silnik
     {
+        public static int lifePoints = 0;
         public static void Player()
         {
             int playerId = 0;
-            int lifePoints;
+            //int lifePoints;
             int attackPoints;
             Console.WriteLine("Wybierz postac: \n 1.Mnich \n 2.Nekromanta");
             playerId = Int32.Parse(Console.ReadLine());
@@ -45,6 +46,13 @@ namespace ProjektP
                     monsterAttack = 8;
                     break;
             }
+
+            RPS();
+        }
+
+        public static void RPS()
+        {
+            Console.WriteLine(lifePoints);
         }
     }
 }
