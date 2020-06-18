@@ -26,6 +26,8 @@ namespace ProjektP
                     lifePoints = 15;
                     attackPoints = 8;
                     break;
+                default:
+                    throw new ArgumentException("Wartosc spoza zakresu");
             }
             Monster();
         }
@@ -47,6 +49,8 @@ namespace ProjektP
                     monsterLife = 20;
                     monsterAttack = 8;
                     break;
+                default:
+                    throw new ArgumentException("Wartosc spoza zakresu");
             }
 
             Program.Gameplay();
@@ -122,10 +126,12 @@ namespace ProjektP
                 if (lifePoints <= 0)
                 {
                     Console.WriteLine("Przeciwnik zwyciezyl!");
+                    Console.ReadKey();
                 }
                 else if (monsterLife <= 0)
                 {
                     Console.WriteLine($"{playerName} zwyciezyl!");
+                    Console.ReadKey();
                 }
             }
         }
